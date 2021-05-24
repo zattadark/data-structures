@@ -1,0 +1,22 @@
+# task 1
+import math as ma
+r=float(input('enter value of radius: '))
+area=ma.pi*(r**2)
+print('The area of circle with radius ',r,'is :',area)
+# task 2
+extension={
+    'py':'python',
+    'c':'C',
+    'cpp':'C++',
+    'doc':'word',
+    'xlsx':'excel',
+    'gif':'GIF image',
+    'jpg':'JPEG image',
+    'jpeg':'JPEG image',
+    'htm':'HTML file',
+    'html':'HTML file'
+}
+file=input('input file name: ')
+file1=file.split('.')
+fileType=extension.get(file1[-1])
+print('the extension of file is: ',fileType)
