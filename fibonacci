@@ -1,0 +1,19 @@
+a,b=input('enter first and second number: ').split()
+n= input("write 'upto(number)' for no.of terms in sequence or 'till(number)' for what no to reach in sequence: ").split()
+n1=int(n[1])
+Fn=[int(a),int(b)]
+if n[0]=='upto':
+    for i in range(n1-2):
+        c=Fn[i]+Fn[i+1]
+        Fn.append(c)
+elif n[0]=='till':
+    i=1
+    while(max(Fn)<=n1):
+        c=Fn[i-1]+Fn[i]
+        Fn.append(c)
+        i+=1
+    if(max(Fn)>n1):
+        Fn.pop()
+else:
+    print('invalid command type')
+print('the required fibonacci sequence is: ',Fn)
