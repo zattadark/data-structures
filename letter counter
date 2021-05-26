@@ -1,0 +1,15 @@
+import string
+letter_count={}
+strinp= input('enter your string: ')
+string=strinp.strip().lower().split()
+i=0
+while (i<len(string)):
+    j=0
+    while j<len(string[i]):
+        if string[i][j] in letter_count:
+            letter_count[string[i][j]]+=1
+        else:
+            letter_count[string[i][j]]=1
+        j+=1
+    i+=1
+print(letter_count)
